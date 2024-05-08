@@ -1,0 +1,605 @@
+/*Selector universal * para resetear
+todas las propiedades del padding, margin a 0
+y que esto no modifique width y height de la web*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, h1, h2, h3, p {
+    color: white;
+    font-family: Adamina;
+}
+
+@font-face {
+    font-family: Adamina;
+    src: url("/media/Adamina.ttf");
+}
+
+/*Hero image que hace a la par de fondo, centrada con estas propiedades. No tocar!*/
+
+body{
+   /* background-image: url("../media/logo-white.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; */
+    background-color: black;
+}
+
+#heroImage {
+    background-image: url("../media/logo-white.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width:100%;
+    height: 100%;
+    background-position: center; 
+    animation-name: fadeinHeroImage;
+    animation-duration: 6s;
+}
+
+/*#carouselContainer {
+    background-image: url("../media/logo-white.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width:100%;
+    height: 100%;
+    background-position: center; 
+    animation-name: fadeinHeroImage;
+    animation-duration: 6s;
+}*/
+
+
+/* Sección encabezado, yo no la estoy usando porque mi herotext
+heroimage seran al mismo tiempo el fondo por la estetica minimalista*/
+ #encabezado {
+    /*Width 100% cojeria el total del padre que seria
+    1920px, la altura la pondremos absoluta porque quereemos
+    esta medida en concreto */
+    width: 100%;
+    height: 950px;
+ }
+
+#logoMenu, .elementoMenu, #contenedorTlfContacto > *{
+    animation: scalein 0.6s ease-out;
+    animation-delay: 0.4s;
+}
+
+#menu {
+    margin-left: 50%;
+    width: 100%;
+    background: none;
+    display: block;
+    position: fixed;
+    z-index: 10;
+    transition: opacity 0.5s; /*Trnasicion a .oculto*/
+    
+}
+
+/*Codigo por js*/
+.oculto{
+    opacity: 0%;
+    pointer-events: none;
+    /*Cambiamos la opacidad y no el display para eviatar que se recargue el efecto de entrada*/
+}
+
+.elementoMenu{
+    background: none;
+    float: left;
+    padding: 1.1%;
+    font-size: 1em;
+    color: white;
+    /*Estas linea para quitar los puntos del lista*/
+    list-style-type: none;
+}
+
+/*Aqui empieza el submenu */
+#submenu {
+    /*width: 300px;
+    height:150px;*/
+    list-style: none;
+    position:absolute;
+    z-index: 1;  
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    display:none;
+}
+
+.elemSubmenu{
+    width: 100%;
+    height: 35px;
+}
+
+.elemSubmenu > a {
+    text-decoration: none;
+    color: #707070;
+    font-size: 0.7em;
+    transition-duration: 0.2s;
+    transition-property: font-size;
+}
+
+/*Esto permite desplegar el submenu*/
+/*Esto es un selectorm multiple de descendiente, cojera todo lo que este por debajo de submenu*/
+
+.elementoMenu:hover #submenu {
+    display: block;
+
+
+}
+
+
+#logoMenu {
+    width: 15%;
+    float: left;
+    margin-left: 3%;
+    margin-top: 1%;
+    position: fixed;
+}
+
+#contenedorTlfContacto{
+    width: 100%;
+    position: fixed;
+    padding-top: 2%;
+    margin-left: 20%;
+    display: inline-block;
+}
+
+.iconoTlf{
+    padding-top: 0.3%;
+    margin-right: 0.5%;
+    float: left;
+}
+
+.textoTlfContacto {
+    color: #707070;
+    display: inline-block;
+}
+
+@keyframes scalein{
+    0% {transform: scale(2);}
+    100% {transform: scale(1);}
+}
+
+.link {
+    color: #707070;
+    text-decoration: none;
+    font-size: 1.3em;
+    transition-property: font-size;
+    transition-duration: 0.2s;
+    
+}
+
+.link:hover , .elemSubmenu > a:hover {
+    font-size: 1.4em;
+}
+
+ #fondo{
+    
+    backdrop-filter: blur(20px);
+    box-shadow: 0 -150px 1500px black;
+}
+
+#servicios, #galeria, #pestanas {
+    width: 100%;
+    height: 950px;
+}
+
+.tituloSeccion{
+    font-size: 5rem;
+    text-align:center;
+    font-family: "Adamina", serif;
+    color: #FFFFFF;
+}
+
+#contenedorServicios {
+    width: 1200px;
+    height: 625px;
+    margin-left: auto;
+    margin-right: auto;
+    /*Chivato contenedor
+    background-color: white;*/
+    margin-top: 70px;
+}
+
+.colServicios{
+    width: 33.3%;
+    height: 625px; 
+    /*Chivatos de las columnas
+    background-color:red;
+    border-style: solid; */
+    /* Float Evita que se pongan una encima de otra, se ponen al lado*/
+    float: left;
+    justify-content: center;
+
+}
+
+.imgServicio{
+    width: 100%; 
+    height: 300px;
+    padding: 40px;
+    border-radius:15%;
+}
+
+.nombreServicio{
+    width: auto;
+    text-align: center;
+    font-size: 20px;
+}
+
+.textoServicio{
+    width: auto;
+    text-align: center;
+    font-size: 15px;
+    overflow-wrap: break-word;
+    margin: 20px;
+}
+
+#galeria #filosofia {
+    width: 100%;
+    height: 1210px;
+}
+
+.contenedorFilosofia{
+    width: 1200px;
+    height: 625px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+}
+
+.videoFilosofia{
+    width: 50%;
+    border-style: solid  rgba(109, 109, 109, 0.299);
+    float: left;
+    margin-top: 130px;
+    margin-left: 100px;
+}
+
+video {
+    width: 100%;
+    transition-property: width;
+    transition-duration: 1s;
+}
+
+video:hover{
+    width:120%;
+}
+
+.descripcionFilo {
+
+    width: calc(33.33% - 75px);
+    height: calc(50% - 75px);
+    border-style: solid  rgba(109, 109, 109, 0.299);
+    float: left;
+    margin-top: 130px;
+    margin-left: 150px;
+
+}
+
+
+.textoFilo {
+    font-size: 120%;
+    text-align: justify;
+}
+
+
+
+#divEtiquetaPestaña{
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+#tabRecetas {
+    margin-top: 22px;
+}
+
+.etiquetaPestañas{
+    
+    width: 50%;
+    font-size: 2rem;
+    float: left;
+    text-align: center;  
+}
+
+.pestanaActiva {
+    text-decoration:underline; 
+}
+
+.pestañaCentrada{
+    width: 50%;
+    font-size: 2rem;
+    float: left;
+    text-align: center; 
+    vertical-align: middle;
+    line-height: 90px; 
+}
+
+.divPestana{
+    margin-top: 60px;
+    width: 1275px;
+    height: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+#instalaciones {
+    display:none;
+}
+
+.divFoto{
+    width: calc(33.33% - 75px);
+    height: calc(50% - 75px);
+    border-style: solid  rgba(109, 109, 109, 0.299);
+    float: left;
+    margin: 37.5px; 
+}
+
+.divFotoPestana{
+    width: auto;
+    height: auto;
+    border-style: solid  rgba(109, 109, 109, 0.299);
+    float: left;
+    margin: 37.5px 37.5px 37.5px 110px; 
+    aspect-ratio: attr(width) / attr(height);
+    max-width:100%;
+    max-height:100%;
+}
+
+.foto{
+    width: 100%;
+    height: 250px;
+    background-color: none;
+    text-align: center;
+}
+
+
+/*Animación con un poco de pausa al principio */
+@keyframes animFoto {box-shadow: 0 0px 500px lightgrey;
+    0% {transform: scale(0.75, 0.75); animation-play-state:paused;};
+    10% {transform: scale(0.75, 0.75);box-shadow: 0 0px 100px lightgrey;animation-play-state:running;}
+    20% {transform: scale(0.75, 0.75); animation-play-state:running;};
+    100% {transform: scale(1, 1);animation-play-state:running;};
+}
+
+.fotoAnimada {
+    animation-name: animFoto;
+    animation-duration: 1s;
+
+}
+
+.imgProfesional{
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+    margin: auto;
+    transition-property: transform; 
+    transition-duration: 1s;
+    overflow: hidden;
+}
+
+.imgProfesional:hover{
+    transform: scale(1.2 , 1.2);
+    /*width: 100%;
+    height: 120%;*/
+}
+
+.nombre{
+    text-align: center;
+    font-size: 18px;
+    margin-top: 12px;
+}
+
+.descripcion{
+    text-align: center;
+    margin-top: 6px;
+}
+
+#contacto {
+    width: 100%;
+    height: 950px;
+}
+
+#divFormulario{
+    width: auto;
+    height: auto;
+    margin-left: 10%;
+}
+
+.nombreCampo{
+    font-size: 60px;
+}
+
+.campo{
+    width: 546px;
+    height: 72px;
+    font-size: 60px;
+    background: rgba(109, 109, 109, 0.299);
+    color: white;
+    font-family: Adamina;
+}
+
+.campo2{
+    width: 900px;
+    height: 287px;
+    font-size: 40px;
+    background: rgba(109, 109, 109, 0.299);
+    color: white;
+    font-family: Adamina;
+}
+
+#botonAnterior, #botonSiguiente  {
+    display:none;
+}
+
+.boton{
+    margin-top: 30px;
+    display: flex;
+    width: 100px;
+    height: 50px;
+    background: rgba(109, 109, 109, 0.299);
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    transition-property: color, border;
+    transition-duration: 1s;
+}
+
+.boton:hover{
+    background:white;
+    color: black;
+    border-style:double;
+}
+
+/*Modal Formulario*/
+
+#modalForm {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(109, 109, 109, 0.299);
+    display: none;
+    z-index: 5;
+    backdrop-filter: blur(10px);
+    top: 0px;
+    
+}
+
+#cajaModalForm{
+    width: 400px;
+    height: 250px;
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px; 
+    text-align: center; 
+    border-radius: 50px;
+    animation-name:iluminado;
+    animation-duration:1s;
+    animation-fill-mode:forwards;
+}
+
+@keyframes iluminado {
+    0% {opacity:0; box-shadow: 0;}
+    50% {opacity:1; box-shadow: 0 0px 500px lightgrey;}
+    100% {opacity:1; box-shadow: 0 0px 500px white;}
+}
+
+
+
+#cajaModalForm > h3 {
+    padding: 20px;
+    font-size: 2em;
+}
+
+#cajaModalForm > button {
+    font-family: 'Adamino';
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: rgb(151, 151, 151);
+    color: black;
+    transition-property: background-color, color;
+    transition-duration: 0.2s;
+}
+
+#cajaModalForm > button:hover {
+    background-color:black;
+    color: white;
+}
+
+/*Fin modal formulario*/
+
+#pie {
+    margin-top: 8%;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(109, 109, 109, 0.299);
+}
+
+.copyright{
+    text-align: center;
+    font-size: 16px;
+    vertical-align: middle;
+    line-height: 50px;
+}
+
+/*Modal Galeria, aqui bajo para poder acceder con facilidad*/
+#modalLightboxGaleira{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(109, 109, 109, 0.299);
+    display: none;
+    z-index: 5;
+    backdrop-filter: blur(10px);
+    top: 0px;
+    
+}
+
+#galeriaMostrar{
+    width: 640px;
+    height: auto;
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; 
+    border-radius: 50px;
+    animation-name:iluminado;
+    animation-duration:1s;
+    animation-fill-mode:forwards;
+}
+
+.imagenLightbox{
+    width:100%;
+    height:auto;
+    border-radius: 50px;
+
+}
+
+.botonLb{
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(109, 109, 109, 0.299);
+    border: none;
+    border-radius: 20px;
+    transition-property: width, height, background-color, border-radius;
+    transition-duration: 0.5s;
+}
+
+.botonLb:hover{
+    width: 90px;
+    height: 90px;
+    background-color: rgba(109, 109, 109, 0.80);
+    border-radius: 50px;
+}
+
+.botonLbD{
+    right: 300px;
+}
+
+.botonLbI{
+    left: 300px;
+}
+
+.botonLb i {
+    font-size: 3em;
+    color: white;
+    transition-property: font-size;
+    transition-duration: 0.5s;
+}
+
+.botonLb i:hover{
+    font-size: 4em;
+}
+/*Fin modal Galeria*/

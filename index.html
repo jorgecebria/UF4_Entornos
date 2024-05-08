@@ -1,0 +1,248 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutriacción</title>
+    <link rel="stylesheet" href="css/Style.css">
+    <script src="/scripts/script.js"></script>
+    <link rel="preload" as="image" href="media/logowhite.png">
+    <link rel="preload" as="image" href="media/logowhite2.png">
+    <link rel="preload" as="image" href="media/logowhite3.png">
+
+    <!--Iconos font awesome-->
+    <script src="https://kit.fontawesome.com/ed66b94722.js" crossorigin="anonymous"></script>
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <div id="heroImage">
+    <div id="carouselContainer" class="fondosHero">
+    <header id="encabezado">
+        
+            <img id="logoMenu" src="media\logo-no-background.png">
+            <div id="contenedorTlfContacto">
+                <img class="iconoTlf" src="media\phone-16.png">
+                <p class="textoTlfContacto">+34 000000000</p>
+             </div>
+    
+
+        <nav>
+            <ul id="menu">
+                <li class="elementoMenu"><a class="link" href="#encabezado">Inicio</a></li>
+                <li class="elementoMenu"><a class="link" href="#filosofia">Filosofía</a></li>
+                <li class="elementoMenu"><a class="link" href="#servicios">Servicios</a></li>
+                <li class="elementoMenu"><a class="link" href="#galeria">Galería</a></li>
+                <li class="elementoMenu"><a class="link" href="#pestanas">Pestañas</a>
+                    <ul id="submenu">
+                        <li class="elemSubmenu" onclick="marcarPestana('platosEstrella','tabRecetas')"><a href="#tabRecetas">Recetas Estrella</a></li>
+                        <li class="elemSubmenu" onclick="marcarPestana('platosEstrella','tabInstalaciones')"><a href="#tabInstalaciones">Instalaciones</a></li>
+                    </ul>
+                </li>
+                <li class="elementoMenu"><a class="link" href="#contacto">Contacto</a></li>
+            </ul>
+        </nav> 
+    
+    </header>
+    
+    <div id="fondo">
+        <section id="servicios">
+
+            <h2 class="tituloSeccion" data-aos="fade-right">Servicios</h2>
+            <!--Contenedor columnas con columnas dentro-->
+            <div id="contenedorServicios">
+                <div class="colServicios">
+                    <img src="media\consultaPersonalizada.jpg" alt="Consulta Personalizada" class="imgServicio" data-aos="flip-up">
+                    <h3 class="nombreServicio">Consulta Personalizada</h3>
+                    <p class="textoServicio">Consulta de nutrición adaptada a tus necesidades, libre de cultura de dieta.</p>
+                </div>
+                <div class="colServicios">
+                    <img src="media\EducacionNutricional.jpg" alt="Educación Nutricional" class="imgServicio" data-aos="flip-up">
+                    <h3 class="nombreServicio">Educación Nutricional</h3>
+                    <p class="textoServicio">Aprende a comer saludable y divertido. Respetando tus gustos y preferencias.</p>
+                </div>
+                <div class="colServicios">
+                    <img src="media\ServicioAntropometria.jpg" alt="Servicio Antropometría" class="imgServicio" data-aos="flip-up">
+                    <h3 class="nombreServicio">Servicio de Antopometría</h3>
+                    <p class="textoServicio">Mediciones de porcentaje de masa grasa y magra para deportistas de élite.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <!--Nueva Sección Para el Video-->
+
+        <section id="filosofia">
+            <h2 class="tituloSeccion" data-aos="fade-left">Filosofia</h2>
+            <div class="contenedorFilosofia">
+                <div class="videoFilosofia">
+                    <video autoplay muted controls><source src="media\videoFilosofia.mp4" type="video/mp4"></video>
+                </div>
+                <div class="descripcionFilo">
+                    <p class="textoFilo">Nuestra filosofia se basa en ayudarte a comer 
+                    de una forma equilibrada trabanjando siempre desde
+                    el autocuidado. Nuestro último objetivo es mejorar el bienestar
+                    personal y la relación con la comida de nuestros clientes. 
+                    Creemos que la nutrición es la base de la salud y por ello
+                    no debe ser un quebradero de cabeza, sino un lugar desde el que 
+                    quererese, respetarse y cuidarse.
+
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeria">
+            <h2 class="tituloSeccion" data-aos="fade-right">Galería</h2>
+
+            <div id="divPestaña">
+                <!--divFoto es como si fuera la columna-->
+                <div class="divFoto">
+                    <div class="foto"><img src="media/profesional1.jpg" class="imgProfesional"></div>
+                    <p class="nombre">Andrés Felipe</p>
+                    <p class="descripcion">Nutricionista</p>
+                </div>
+
+                <div class="divFoto">
+                    <div class="foto"><img src="media/profesional2.jpg" class="imgProfesional"></div>
+                    <p class="nombre">Belén Esteban</p>
+                    <p class="descripcion">Nutricionista</p>
+                </div>
+
+                <div class="divFoto">
+                    <div class="foto"><img src="media/profesional3.jpg" class="imgProfesional"></div>
+                    <p class="nombre">Paco Francés</p>
+                    <p class="descripcion">Técnico Nutrición</Table></p>
+                </div>
+
+                <div class="divFoto">
+                    <div class="foto"><img src="media/profesional4.jpg" class="imgProfesional"></div>
+                    <p class="nombre">Mariano Sandobal</p>
+                    <p class="descripcion">Endocrino</p>
+                </div>
+
+                <div class="divFoto">
+                    <div class="foto"><img src="media/profesional5.jpg" class="imgProfesional"></div>
+                    <p class="nombre">Noel Klaus y Mr Banani</p>
+                    <p class="descripcion">Repartidor y gato mecánico</p>
+                </div>
+
+                <div class="divFoto">
+                    <div class="foto"><img src="media/profesional6.jpg" class="imgProfesional"></div>
+                    <p class="nombre">Cristian Jesús de la Cruz</p>
+                    <p class="descripcion">Marketing y Comunity Manager</p>
+                </div>
+            </div>
+
+            <!--Modal galeria-->
+            <div id="modalLightboxGaleria">
+                <div id="galeriaMostrar">
+                    
+                </div>
+                <button id="botonAnterior" class="botonLb botonLbI" onclick="prevImgGal()">
+                    <i class="fa-solid fa-angle-left "></i>
+                </button>
+                <button id="botonSiguiente" class="botonLb botonLbD" onclick="nextImgGal()">
+                    <i class="fa-solid fa-angle-right"></i>
+                </button>
+            </div>
+
+        </section>
+
+        <!--Reciclado de galeria para añadir pestañas, en la correción dice que juntar galería y pestañas puede complicar el entregable-->
+        <section id="pestanas">
+            <h2 class="tituloSeccion" data-aos="fade-right">Pestañas</h2>
+            <div id="divEtiquetaPestaña">
+
+                <p id="tabRecetas"class="etiquetaPestañas pestanaActiva clickPestana" onclick="marcarPestana('platosEstrella','tabRecetas')" data-aos="fade-up-right">Recetas Estrella</p>
+                <p id="tabInstalaciones" class="pestañaCentrada clickPestana " onclick="marcarPestana('instalaciones','tabInstalaciones')"data-aos="fade-up-left">Instalaciones</p>
+
+            </div>
+
+            <div class="divPestana" id="platosEstrella">
+                <!--divFoto es como si fuera la columna-->
+                <div class="divFotoPestana">
+                    <div class="foto"><img src="media/plato1.jpg" class="imgProfesional"></div>
+                </div>
+                <div class="divFotoPestana">
+                    <div class="foto"><img src="media/plato2.jpg" class="imgProfesional"></div>
+                </div>
+                <div class="divFotoPestana">
+                    <div class="foto"><img src="media/plato3.jpg" class="imgProfesional"></div>
+                </div>
+                <div class="divFotoPestana">
+                    <div class="foto"><img src="media/plato4.jpg" class="imgProfesional"></div>
+                </div>
+                <div class="divFotoPestana">
+                    <div class="foto"><img src="media/plato5.jpg" class="imgProfesional"></div>
+                </div>
+                <div class="divFotoPestana">
+                    <div class="foto"><img src="media/plato6.jpg" class="imgProfesional"></div>
+                </div>
+            </div>
+
+            <div class="divPestana" id="instalaciones">
+                <!--divFotoPestana es como si fuera la columna-->
+                <div class="divFotoPestana">
+                    <div class="foto"><img src="media/instalacion1.jpg" class="imgProfesional"></div>                    
+                </div>
+                <div class="divFotoPestana">
+                    <div class="foto"><img src="media/instalacion2.jpg" class="imgProfesional"></div>                    
+                </div>
+                <div class="divFotoPestana">
+                    <div class="foto"><img src="media/instalacion3.jpg" class="imgProfesional"></div>                    
+                </div>
+                <div class="divFotoPestana">
+                    <div class="foto"><img src="media/instalacion4.jpg" class="imgProfesional"></div>                    
+                </div>
+                <div class="divFotoPestana">
+                    <div class="foto"><img src="media/instalacion5.jpg" class="imgProfesional"></div>                    
+                </div>
+                <div class="divFotoPestana">
+                    <div class="foto"><img src="media/instalacion6.jpg" class="imgProfesional"></div>                    
+                </div>
+            </div>
+
+        </section>
+
+        <section id="contacto" data-aos="fade-right">
+            <h2 class="tituloSeccion">Contacto</h2>
+
+            <form action="" id="formulario" data-aos="zoom-out-down">
+                <div id="divFormulario">
+                    <p class="nombreCampo">Nombre:</p>
+                    <input type="text" name="nombre" class="campo">
+                    <p class="nombreCampo">Teléfono:</p>
+                    <input type="text" name="telefono" class="campo">
+                    <p class="nombreCampo">E-mail:</p>
+                    <input type="text" name="correo" class="campo">
+                    <p class="nombreCampo">Cuéntanos:</p>
+                    <textarea name="Cuentanos" class="campo2" value="Cuéntanos tu caso"></textarea>
+                    <input name="enviar" class="boton" value="Enviar" onclick="modalForm()">
+                </div>
+            </form>
+        </section>
+    </div>
+    
+      <!-- Modal del formulario -->
+    <div id="modalForm">
+        <div id="cajaModalForm">
+            <h3>¡Mensaje enviado!</h3>
+            <button onclick="cerrarModalForm()">Cerrar</button>
+        </div>
+    </div>
+
+    <footer id="pie">
+        <p class="copyright">Todos los derechos reservados a ©Nutriacción Corp.</p>
+    </footer> 
+</div>
+
+<script>
+    setInterval(heroSlideshow, 3000);
+    readyLightbox();
+    AOS.init();
+</script>   
+
+</body>
+</html>
